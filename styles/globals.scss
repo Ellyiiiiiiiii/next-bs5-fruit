@@ -1,0 +1,153 @@
+// 檔案位置: styles/global.scss
+// 變數覆蓋用 (Variable overrides)
+// 全站配色 colors
+$primary: #023047;
+$secondary: rgba(41, 41, 40, 0.5);
+$success: #7eb4e6;
+$danger: #ff4136;
+
+// 按鈕圓角邊 button radius
+$border-radius: 0.2em;
+$border-radius-sm: 0.2em;
+$border-radius-lg: 0.2em;
+
+// 固定card高度
+// https://getbootstrap.com/docs/5.3/components/card/#grid-cards
+// $card-height: 100%;
+
+// :root {
+//   --font-en: "Roboto", sans-serif;
+//   --color-primary: #ef8322;
+//   --color-secondary: #96e881;
+//   --color-secondary-mid: #82e2a6;
+//   --color-black: #292929;
+//   --color-black-rgb: 41, 41, 41;
+//   --color-black-80: rgba(var(--color-black-rgb), 0.8);
+//   --color-gray: #464646;
+//   --color-gray-mid: #9b9b9b;
+//   --color-gray-mid-rgb: 155, 155, 155;
+//   --color-gray-mid-40: rgba(var(--color-gray-mid-rgb), 0.4);
+//   --color-gray-light: #f5f5f5;
+//   --color-gray-light-rgb: 245, 245, 245;
+//   --color-gray-light-80: rgba(var(--color-gray-light-rgb), 0.8);
+//   --color-white: #fff;
+//   --color-white-rgb: 255, 255, 255;
+//   --color-white-40: rgba(var(--color-white-rgb), 0.4);
+//   --spacing-160: 16rem;
+//   --spacing-120: 12rem;
+//   --spacing-80: 10rem;
+//   --spacing-64: 6.4rem;
+//   --spacing-40: 4rem;
+//   --spacing-32: 3.2rem;
+//   --spacing-24: 2.4rem;
+//   --spacing-16: 1.6rem;
+//   --spacing-8: 0.8rem;
+// }
+// @media (max-width: 575.98px) {
+//   :root {
+//     --spacing-160: 24vw;
+//     --spacing-120: 20vw;
+//     --spacing-80: 16vw;
+//     --spacing-64: 14vw;
+//     --spacing-40: 10vw;
+//     --spacing-32: 8vw;
+//     --spacing-24: 6vw;
+//     --spacing-16: 4vw;
+//     --spacing-8: 2vw;
+//   }
+// }
+
+// *, *::before, *::after {
+//   position: relative;
+//   -webkit-box-sizing: border-box;
+//           box-sizing: border-box;
+// }
+
+// html {
+//   font-size: calc(16px / 1.6);
+// }
+// @media (max-width: 1199.98px) {
+//   html {
+//     font-size: 9.375px;
+//   }
+// }
+// @media (max-width: 1024px) {
+//   html {
+//     font-size: 8.75px;
+//   }
+// }
+
+// body {
+//   margin: 0;
+//   font-family: "Noto Sans TC", sans-serif;
+//   font-size: 1.6rem;
+//   font-weight: 400;
+//   letter-spacing: 0.12rem;
+//   line-height: 1.44;
+//   -webkit-font-smoothing: antialiased;
+//   color: var(--color-gray-light);
+//   background-color: var(--color-white);
+//   -webkit-transition: background-color 0.8s;
+//   transition: background-color 0.8s;
+// }
+// body.is-news-active {
+//   background-image: none;
+//   background-color: var(--color-primary);
+// }
+
+// ↑↑↑  變數覆蓋(Variable overrides) 要寫在這行"上面"  ↑↑↑
+// 這裡導入所有 bootstrap 樣式
+// 最後營運階段(實務)可以用部份導入來進行最佳化
+// 參考: https://getbootstrap.com/docs/5.3/customize/sass/#importing
+@import '~bootstrap/scss/bootstrap';
+// ↓↓↓  其它客製樣式要寫在這行的"下面" ↓↓↓
+
+// bs5內建圖示字體
+// 如果有使用其它圖示字體可以註解不使用
+@import '~bootstrap-icons/font/bootstrap-icons';
+
+// google Noto Sans TC 字體
+@import 'https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap';
+
+
+// fixed for __next root div
+#__next {
+  flex-direction: column;
+  height: 100%;
+  display: flex;
+}
+
+main > .container {
+  padding: 60px 15px 0;
+}
+
+body {
+  font-family: 'Noto Sans TC Regular', Helvetica, Arial, 'PingFang TC',
+    '苹方-繁', 'Heiti TC', '黑體-繁', 'Microsoft JhengHei', '微軟正黑體',
+    // Cross-platform generic font family (default user interface font)
+    system-ui,
+    // Safari for macOS and iOS (San Francisco)
+    -apple-system,
+    // Windows
+    'Segoe UI',
+    // Android
+    Roboto,
+    // Basic web fallback
+    'Helvetica Neue',
+    Arial,
+    // Linux
+    'Noto Sans',
+    'Liberation Sans',
+    // Sans serif fallback
+    sans-serif,
+    // Emoji fonts
+    'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+// .form-member {
+//   max-width: 330px;
+//   padding: 1rem;
+// }
+
+// below is test only
